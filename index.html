@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biodata Diri</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .play {
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body onclick="playAudio()">
+    <audio id="audioPlayer">
+      <source src="audioMaman.mp3" type="audio/mp3" />
+    </audio>
+
+    <div class="container">
+      <h1>BIODATA ABDURRAHMAN</h1>
+      <div class="biodata">
+        <div class="photo">
+          <img src="maman.JPG" alt="Foto Maman" />
+        </div>
+        <div class="info">
+          <table>
+            <tr>
+              <td class="colon"><strong> NISN </strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">00071234567</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Kelas</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">XII B</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Jurusan</strong></td>
+              <td class="colon">:</td>
+              <td class="colon">RPL ( REKAYASA PERANGKAT LUNAK)</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Jenis Kelamin</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">Laki-laki</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Tempat Tanggal Lahir</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">Subang, 30 Juli 2007</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Hobi</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">Ngoding</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Cita-Cita</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">Remote Progamer</td>
+            </tr>
+            <tr>
+              <td class="colon"><strong>Alamat</strong></td>
+              <td class="colon"><strong>:</strong></td>
+              <td class="colon">
+                Dusun Pusakajati RT.09 RW.02 Desa Pusakaratu Kec. Pusakanagara
+                Kab. Subang
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <footer>&copy; Created ❤️ by Maman 😎</footer>
+
+    <script>
+      function playAudio() {
+        var audio = document.getElementById("audioPlayer");
+        audio.play();
+      }
+    </script>
+  </body>
+</html>

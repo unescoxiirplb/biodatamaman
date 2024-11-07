@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background: url('bg2.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: "Itim", sans-serif;
+  text-shadow: 2px 2px 5px rgba(207, 11, 242, 0.3);
+}
+
+.container {
+  text-align: center;
+  width: 80%;
+  max-width: 600px;
+  background-color:     #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  animation: borderLoop 2s linear infinite;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+  border-bottom: 2px solid #a7a7a7;
+  padding-bottom: 10px;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  animation: typing 5s steps(30) infinite;
+}
+
+.biodata {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Menempatkan gambar di tengah secara vertikal */
+  gap: 20px;
+}
+
+.photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo img {
+  width: 120px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #7b01a7;
+  transition: transform 0.3s ease;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.photo img:hover {
+  transform: scale(1.1);
+}
+
+.info {
+  flex: 3;
+  text-align: left;
+}
+
+.info table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.info td {
+  padding: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.info td:first-child {
+  width: 120px;
+  font-weight: bold;
+}
+footer {
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: rgba(140, 26, 189, 0.644);
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    letter-spacing: 1px;
+    font-size: 0.5rem;
+  }
+  
+
+@media (max-width: 600px) {
+  .biodata {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info {
+    text-align: left;
+  }
+
+  .photo img {
+    width: 100px;
+    margin-top: 15px;
+  }
+}
+
+/* Animasi mengetik pada h1 */
+@keyframes typing {
+  0% {
+    width: 0;
+    white-space: nowrap;
+  }
+  50% {
+    width: 100%;
+    white-space: nowrap;
+  }
+  100% {
+    width: 0;
+    white-space: nowrap;
+  }
+}
+
+/* Animasi Border */
+@keyframes borderLoop {
+  0% {
+    border-top: 6px solid rgb(178, 2, 243);
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
+  25% {
+    border-top: 6px solid rgb(178, 2, 243);
+    border-right: 6px solid rgb(178, 2, 243);
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
+  50% {
+    border-top: 6px solid transparent;
+    border-right: 6px solid rgb(178, 2, 243);
+    border-bottom: 6px solid rgb(178, 2, 243);
+    border-left: 6px solid transparent;
+  }
+  75% {
+    border-top: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid rgb(178, 2, 243);
+    border-left: 6px solid rgb(178, 2, 243);
+  }
+  100% {
+    border-top: 6px solid rgb(178, 2, 243);
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+  }
+}
